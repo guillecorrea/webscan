@@ -65,7 +65,8 @@ $updst = "?v=".time();
           Imagen</a>
           <a href="#" class="btn btn-default disabled "  download target="_blank" role="button" dat-bot=descargarpdf >
           <span class="glyphicon glyphicon-download" aria-hidden="true"></span>  Pdf</a>
-          
+          <a href="#" class="btn btn-default disabled "   role="button" dat-bot=print >
+          <span class="glyphicon glyphicon-print" aria-hidden="true"></span>  </a>
           </p>
       </div>
     </div>
