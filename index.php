@@ -46,7 +46,7 @@ $updst = "?v=".time();
 </nav>
 
 <div class="row" style="margin-top:50px;" >
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-4" style="width:100%;">
     <div class="thumbnail">
       <img id=idimgscan src="img/scanner_gris.png" alt="..."  >
       <div class="caption" style="text-align:center;">

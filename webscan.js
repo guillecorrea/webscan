@@ -63,7 +63,7 @@ $('.btn[dat-bot=descargarimg]')[0].href='./' + data.img;
 $('.btn[dat-bot=descargarpdf]')[0].href='./' + data.pdf;
 
   
-  img.src = './' + data.timg;
+  img.src = './' + data.timg + '?' + new Date().getTime();
  img.onload = function(){ 
      $('.alert-info').hide(); 
     

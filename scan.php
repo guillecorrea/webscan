@@ -26,8 +26,9 @@ $error = FALSE;
 
     if(file_exists($d)){
 
-      $ret=  shell_exec("lpr -PPS \"". $d ."\"");
+   //   $ret=  shell_exec("lpr -PPS \"". $d ."\"");
 
+$ret = shell_exec('lp -d PS "'.$d.'"'  );
       // detectar si fuye correcta la impresion 
 
     }else{
@@ -53,10 +54,13 @@ $scantimg = __DIR__."/data/tscan_".session_id().".png";
 $error = FALSE;
 $errormsj ="";
 
-$ret = shell_exec( "hp-scan  -r 200 -m color   -o " .$scanimg);
+$ret = shell_exec( "hp-scan  -r 100  -m color   -o " .$scanimg);
 
 if(file_exists($scanimg)){
-$ret2 =shell_exec(" convert -rotate 180 ".$scanimg ." ". $scanimg);
+// para futura opcion
+//$ret2 =shell_exec(" convert -rotate 180 ".$scanimg ." ". $scanimg);
+
+
 $ret2 =shell_exec(" convert ".$scanimg ." ". $scanpdf);
 $ret3= shell_exec(" convert -scale 50% ".$scanimg ." ". $scantimg);
 
